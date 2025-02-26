@@ -7,7 +7,7 @@ const GeminiChat = () => {
     const [response, setResponse] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const API_KEY = "AIzaSyAYJaYaKLhGUfddS9_MPK4BjmReiupeVig"; // Replace with your API key
+    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
     const fetchGeminiResponse = async () => {
         if (!input) return;
