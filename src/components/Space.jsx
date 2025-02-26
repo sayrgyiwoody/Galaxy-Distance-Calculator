@@ -3,12 +3,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { Plus, Trash2, Edit2, Check, X, Loader2, Edit } from "lucide-react"
-import Visualization from "./GalaxyVisulization"
 import GalaxyVisualization from "./GalaxyVisulization"
-// import { Button } from "@/components/ui/button"
-// import { Input } from "@/components/ui/input"
-// import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-// import { toast } from "@/components/ui/use-toast"
 
 // interface Galaxy {
 //     name: string
