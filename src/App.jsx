@@ -9,10 +9,10 @@ function App() {
     //   {/* <GeminiChat /> */}
 
     // </div>
-    <>
+    <div className=' bg-gray-950 h-screen text-white'>
       <Space/>
       
-    </>
+    </div>
   )
 }
 

@@ -18,7 +18,13 @@ import GalaxyVisualization from "./GalaxyVisulization"
 // }
 
 export default function Space() {
-    const [galaxies, setGalaxies] = useState([])
+    const [galaxies, setGalaxies] = useState([
+        { name: 'milky way', x: -238, y: 854, z: 123 }
+        ,
+        { name: 'black eye', x: 345, y: -123, z: 678 }
+        ,
+        { name: 'andromeda', x: 150, y: 200, z: 300 }
+    ])
     const [newGalaxyName, setNewGalaxyName] = useState("")
     const [editingIndex, setEditingIndex] = useState(null)
     const [editingGalaxy, setEditingGalaxy] = useState({ name: "", x: 0, y: 0, z: 0 })
@@ -144,11 +150,12 @@ export default function Space() {
 
         <>
             <button onClick={()=>setIsPreview((pre)=>!pre)}>toggle preview</button>
-            {
-                isPreview ? (
+            <div className={`${!isPreview ? 'hidden' : 'block'}`}>
                     <GalaxyVisualization galaxies={galaxies} />
-                ) : (
-                    <div className="container mx-auto p-4">
+                </div>
+                    
+                
+            <div className={`${isPreview ? 'hidden' : 'block'} container mx-auto p-4`}>
                         <h1 className="text-2xl font-bold mb-4">Galaxy Distance Calculator</h1>
 
                         <div className="grid grid-cols-2 gap-2 mb-4">
@@ -286,8 +293,7 @@ export default function Space() {
                         {/* <Visualization galaxies={galaxies} /> */}
 
                     </div>
-                )
-            }
+               
         </>
     )
 }
